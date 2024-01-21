@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct helpdesk_principalApp: App {
+
+    @State private var isShowingSplash = true
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if isShowingSplash {
+                SplashView()
+            } else {
+                LoginView()
+            }
         }
     }
 }
