@@ -14,6 +14,7 @@
 		945A6ADD2B5C57B600B3DBD0 /* helpdesk_principalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945A6ADC2B5C57B600B3DBD0 /* helpdesk_principalTests.swift */; };
 		945A6AE72B5C57B600B3DBD0 /* helpdesk_principalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945A6AE62B5C57B600B3DBD0 /* helpdesk_principalUITests.swift */; };
 		945A6AE92B5C57B600B3DBD0 /* helpdesk_principalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945A6AE82B5C57B600B3DBD0 /* helpdesk_principalUITestsLaunchTests.swift */; };
+		945A6AF62B5C58C600B3DBD0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 945A6AF52B5C58C600B3DBD0 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		945A6AE22B5C57B600B3DBD0 /* helpdesk-principalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "helpdesk-principalUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		945A6AE62B5C57B600B3DBD0 /* helpdesk_principalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helpdesk_principalUITests.swift; sourceTree = "<group>"; };
 		945A6AE82B5C57B600B3DBD0 /* helpdesk_principalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helpdesk_principalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		945A6AF52B5C58C600B3DBD0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		945A6ABF2B5C57B400B3DBD0 = {
 			isa = PBXGroup;
 			children = (
+				945A6AF52B5C58C600B3DBD0 /* README.md */,
 				945A6ACA2B5C57B400B3DBD0 /* helpdesk-principal */,
 				945A6ADB2B5C57B600B3DBD0 /* helpdesk-principalTests */,
 				945A6AE52B5C57B600B3DBD0 /* helpdesk-principalUITests */,
@@ -231,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				945A6AF62B5C58C600B3DBD0 /* README.md in Resources */,
 				945A6AD32B5C57B500B3DBD0 /* Preview Assets.xcassets in Resources */,
 				945A6AD02B5C57B500B3DBD0 /* Assets.xcassets in Resources */,
 			);
