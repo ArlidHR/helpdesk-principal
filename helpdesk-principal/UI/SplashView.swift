@@ -22,7 +22,7 @@ struct SplashView: View {
                         .scaledToFit()
                         .frame(width: 200, height: 200)
                 } else {
-                    Image("SplashScreenI-mage")
+                    Image("SplashScreenImage")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 200, height: 200)
