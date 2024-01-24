@@ -21,6 +21,8 @@
 		945A6B0C2B5DAD2E00B3DBD0 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 945A6B082B5DAD2E00B3DBD0 /* Nunito-Bold.ttf */; };
 		945A6B0D2B5DAD2E00B3DBD0 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 945A6B092B5DAD2E00B3DBD0 /* Nunito-SemiBold.ttf */; };
 		945A6B0E2B5DAD2E00B3DBD0 /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 945A6B0A2B5DAD2E00B3DBD0 /* Nunito-Black.ttf */; };
+		947D07932B60A8A00080B32E /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947D07922B60A8A00080B32E /* Login.swift */; };
+		947D07952B60AB640080B32E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947D07942B60AB640080B32E /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		945A6B082B5DAD2E00B3DBD0 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		945A6B092B5DAD2E00B3DBD0 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
 		945A6B0A2B5DAD2E00B3DBD0 /* Nunito-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Black.ttf"; sourceTree = "<group>"; };
+		947D07922B60A8A00080B32E /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		947D07942B60AB640080B32E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,9 +114,11 @@
 		945A6ACA2B5C57B400B3DBD0 /* helpdesk-principal */ = {
 			isa = PBXGroup;
 			children = (
+				947D07902B60A7060080B32E /* Connections */,
 				945A6B052B5DACF600B3DBD0 /* Fonts */,
 				945A6AF82B5D7A4400B3DBD0 /* Resources */,
-				945A6AFA2B5D821200B3DBD0 /* UI */,
+				947D07912B60A8270080B32E /* Splash */,
+				947D078B2B60A5F00080B32E /* Login */,
 				945A6AF72B5D77AF00B3DBD0 /* Info.plist */,
 				945A6ACB2B5C57B400B3DBD0 /* helpdesk_principalApp.swift */,
 				945A6ACD2B5C57B400B3DBD0 /* ContentView.swift */,
@@ -162,13 +168,12 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		945A6AFA2B5D821200B3DBD0 /* UI */ = {
+		945A6AFA2B5D821200B3DBD0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				945A6AFB2B5D831A00B3DBD0 /* SplashView.swift */,
-				945A6AFF2B5D836E00B3DBD0 /* LoginView.swift */,
 			);
-			path = UI;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		945A6B052B5DACF600B3DBD0 /* Fonts */ = {
@@ -188,6 +193,55 @@
 				945A6B092B5DAD2E00B3DBD0 /* Nunito-SemiBold.ttf */,
 			);
 			path = Nunito;
+			sourceTree = "<group>";
+		};
+		947D078B2B60A5F00080B32E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				947D078C2B60A5FF0080B32E /* Models */,
+				947D078D2B60A6080080B32E /* Views */,
+				947D078E2B60A61E0080B32E /* ViewModels */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		947D078C2B60A5FF0080B32E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				947D07922B60A8A00080B32E /* Login.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		947D078D2B60A6080080B32E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				945A6AFF2B5D836E00B3DBD0 /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		947D078E2B60A61E0080B32E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		947D07902B60A7060080B32E /* Connections */ = {
+			isa = PBXGroup;
+			children = (
+				947D07942B60AB640080B32E /* NetworkManager.swift */,
+			);
+			path = Connections;
+			sourceTree = "<group>";
+		};
+		947D07912B60A8270080B32E /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				945A6AFA2B5D821200B3DBD0 /* Views */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,7 +379,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				947D07952B60AB640080B32E /* NetworkManager.swift in Sources */,
 				945A6ACE2B5C57B400B3DBD0 /* ContentView.swift in Sources */,
+				947D07932B60A8A00080B32E /* Login.swift in Sources */,
 				945A6ACC2B5C57B400B3DBD0 /* helpdesk_principalApp.swift in Sources */,
 				945A6B002B5D836E00B3DBD0 /* LoginView.swift in Sources */,
 				945A6AFC2B5D831A00B3DBD0 /* SplashView.swift in Sources */,
