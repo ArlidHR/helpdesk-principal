@@ -11,13 +11,19 @@ import SwiftUI
 struct helpdesk_principalApp: App {
 
     @State private var isShowingSplash = true
+    private let loginService = LoginService()
+    @ObservedObject private var loginViewModel: LoginViewModel
+
+    init() {
+        loginViewModel = LoginViewModel(loginService: loginService)
+    }
 
     var body: some Scene {
         WindowGroup {
             if isShowingSplash {
                 SplashView()
             } else {
-                LoginView()
+                LoginView(viewModel: loginViewModel)
             }
         }
     }

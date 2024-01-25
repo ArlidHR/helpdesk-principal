@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct LoginView: View {
+    @ObservedObject var viewModel: LoginViewModel
+    
     var body: some View {
         ZStack () {
             Image("BackgroundLoginImage")
@@ -17,7 +19,7 @@ struct LoginView: View {
             
             VStack() {
                 ImageLoginView()
-                TextFieldLoginView()
+                TextFieldLoginView(viewModel: viewModel)
                 Spacer()
             }
         }
@@ -36,7 +38,8 @@ struct ImageLoginView: View {
 struct TextFieldLoginView: View {
     @State private var emailTextField = ""
     @State private var passwordTextField = ""
-    
+    @ObservedObject var viewModel: LoginViewModel
+
     var body: some View {
         VStack {
             ZStack(alignment: .leading) {
@@ -62,13 +65,13 @@ struct TextFieldLoginView: View {
             .background(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 2))
             
             .padding(.bottom, 40)
-
+            
             Button(action: {
-                print("Button was tapped")
+                viewModel.login()
             }) {
                 HStack {
                     Spacer()
-                    Text("Continuar")
+                    Text(viewModel.user != nil ? "Logged in as \(viewModel.user!.messageCode)" : (viewModel.error != nil ? "Error: \(viewModel.error!.localizedDescription)" : "Continuar"))
                     .font(.custom("Nunito-Bold", size: 17))
                     Spacer()
                 }
@@ -83,5 +86,5 @@ struct TextFieldLoginView: View {
 }
 
 #Preview {
-    LoginView()
+    LoginView(viewModel: LoginViewModel(loginService: LoginService()))
 }
