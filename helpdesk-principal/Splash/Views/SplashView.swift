@@ -10,11 +10,17 @@ import SwiftUI
 struct SplashView: View {
     @State private var isActive = false
     @Environment(\.colorScheme) var colorScheme
+    private let loginService = LoginService()
+    @ObservedObject private var loginViewModel: LoginViewModel
 
+    init() {
+        loginViewModel = LoginViewModel(loginService: loginService)
+    }
+    
     var body: some View {
         ZStack {
             if isActive {
-                LoginView()
+                LoginView(viewModel: loginViewModel)
             } else {
                 if colorScheme == .dark {
                     Image("SplashScreenImage")
@@ -22,7 +28,7 @@ struct SplashView: View {
                         .scaledToFit()
                         .frame(width: 200, height: 200)
                 } else {
-                    Image("SplashScreenI-mage")
+                    Image("SplashScreenImage")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 200, height: 200)
